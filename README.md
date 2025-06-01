@@ -12,24 +12,12 @@
 
 - **Delete Project:** Remove a project and all its associated sessions.
 
-## Setup
-1. **Clone the repository (or save the files)**:
-
-    Ensure you have `main.py`, `db.py`, and `setup.py` in your project directory, structured as follows:
-    ```
-    tracker/
-    ├── src/
-    │   ├── main.py
-    │   └── db.py
-    └── setup.py
-    ```
-2. **Install the application**:
-
-    Navigate to the root directory of the tracker project (where setup.py is located) in your terminal and run:
-    ```
-    pip install .
-    ```
-    This will install the tracker command globally on your system.
+## Installation
+Run:
+```
+pip install productivity-tracker
+```
+This will install the `tracker` command globally on your system.
 
 ## Usage
 The `tracker` command uses subcommands for different operations.
