@@ -69,7 +69,7 @@ The application uses an SQLite database named `.projects.db`, which will be crea
 The database schema includes two tables:
 - projects: Stores project names and their unique IDs.
     - `id`: `INTEGER PRIMARY KEY`
-    - `name`: `NOT NULL`
+    - `name`: `UNIQUE NOT NULL`
 
 - sessions: Stores individual work sessions linked to projects.
     - `id`: `INTEGER PRIMARY KEY`

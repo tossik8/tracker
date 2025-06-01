@@ -34,7 +34,10 @@ class Database:
             cls._conn.executescript(
                 """
                 PRAGMA foreign_keys = ON;
-                CREATE TABLE IF NOT EXISTS projects(id INTEGER PRIMARY KEY, name NOT NULL);
+                CREATE TABLE IF NOT EXISTS projects(
+                    id INTEGER PRIMARY KEY,
+                    name UNIQUE NOT NULL
+                );
                 CREATE TABLE IF NOT EXISTS sessions(
                     id INTEGER PRIMARY KEY,
                     project_id NOT NULL,
