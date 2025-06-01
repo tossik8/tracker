@@ -13,6 +13,7 @@ setup(
     long_description_content_type="text/markdown",
     author="Nikita Toropov",
     author_email="toropov.nikita2004@gmail.com",
+    url="https://github.com/tossik8/tracker",
     license="MIT",
     keywords="tracker,time-tracker,productivity",
     entry_points={
