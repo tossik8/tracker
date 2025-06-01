@@ -75,4 +75,7 @@ def main():
 
     args = parser.parse_args()
     db = Database()
-    args.func(args, db)
+    try:
+        args.func(args, db)
+    except ValueError as e:
+        print(e)
