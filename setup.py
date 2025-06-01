@@ -1,15 +1,24 @@
-from setuptools import setup, find_packages
+import os
 
-name = "tracker"
+from setuptools import setup
+
+with open(os.path.join(os.path.dirname(__file__), "README.md")) as f:
+    long_description = f.read()
 
 setup(
-    name=name,
-    author="Nikita Toropov",
+    name="productivity-tracker",
     version="0.0.1",
-    packages=find_packages(),
+    description="Command-line utility for tracking time spent on projects",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    author="Nikita Toropov",
+    author_email="toropov.nikita2004@gmail.com",
+    license="MIT",
+    keywords="tracker,time-tracker,productivity",
     entry_points={
         "console_scripts": [
-            f"{name} = src.main:main"
+            "tracker = productivity_tracker.main:main"
         ]
-    }
+    },
+    python_requires=">=3.12"
 )
