@@ -64,7 +64,7 @@ The `tracker` command uses subcommands for different operations.
     - This action is irreversible. All session data for the project will be removed.
 
 ## Database
-The application uses an SQLite database named `projects.db`, which will be created automatically in the parent directory of your `src` folder (e.g., in the `tracker` root directory) when you first run any `tracker` command.
+The application uses an SQLite database named `projects.db`, which will be created automatically in the home directory when you first run any `tracker` command.
 
 The database schema includes two tables:
 - projects: Stores project names and their unique IDs.

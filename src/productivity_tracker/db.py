@@ -27,8 +27,10 @@ class Database:
     def __new__(cls) -> Self:
         if not cls._instance:
             cls._instance = super().__new__(cls)
-            path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "projects.db")
-            cls._conn = sqlite3.connect(path, detect_types=sqlite3.PARSE_DECLTYPES)
+            cls._conn = sqlite3.connect(
+                os.path.join(os.path.expanduser("~"), ".projects.db"),
+                detect_types=sqlite3.PARSE_DECLTYPES
+            )
             cls._conn.executescript(
                 """
                 PRAGMA foreign_keys = ON;
