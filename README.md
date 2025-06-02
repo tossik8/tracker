@@ -13,11 +13,13 @@
 - **Delete Project:** Remove a project and all its associated sessions.
 
 ## Installation
+
+It is recommended to perform the installation with [pipx](https://pipx.pypa.io/stable/).
 Run:
 ```
-pip install productivity-tracker
+pipx install productivity-tracker
 ```
-This will install the `tracker` command globally on your system.
+This will install the `tracker` command in an isolated environment.
 
 ## Usage
 The `tracker` command uses subcommands for different operations.
@@ -67,7 +69,7 @@ The `tracker` command uses subcommands for different operations.
 The application uses an SQLite database named `.projects.db`, which will be created automatically in the home directory when you first run any `tracker` command.
 
 The database schema includes two tables:
-- projects: Stores project names and their unique IDs.
+- projects: Stores project names and their IDs.
     - `id`: `INTEGER PRIMARY KEY`
     - `name`: `UNIQUE NOT NULL`
 
