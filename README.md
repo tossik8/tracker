@@ -47,7 +47,7 @@ The `tracker` command uses subcommands for different operations.
     ```
     tracker report <project_name>
     ```
-    - Shows the total number of sessions and the total time spent (in hours) on the project.
+    - Shows the total number of sessions and the total time spent on the project.
 
 4. **List Projects**
 

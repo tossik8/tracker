@@ -7,7 +7,7 @@ with open(os.path.join(os.path.dirname(__file__), "README.md")) as f:
 
 setup(
     name="productivity-tracker",
-    version="0.1.0",
+    version="0.1.1",
     description="Command-line utility for tracking time spent on projects",
     long_description=long_description,
     long_description_content_type="text/markdown",

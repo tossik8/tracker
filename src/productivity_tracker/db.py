@@ -57,7 +57,7 @@ class Database:
         
 
     def get_project_analytics(self, project_id):
-        query = "SELECT COUNT(1), SUM(JULIANDAY(end) - JULIANDAY(start)) * 24 " \
+        query = "SELECT COUNT(1), SUM(JULIANDAY(end) - JULIANDAY(start)) " \
                 "FROM sessions WHERE project_id = ?"
         return self._conn.execute(query, (project_id, )).fetchone()
 
