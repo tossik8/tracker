@@ -36,11 +36,11 @@ def report_activity(args, db: Database):
         raise ValueError(f"Project '{args.project}' does not exist.")
     analytics = db.get_project_analytics(project_id[0])
     hours = analytics[1] * 24
-    minutes = (hours * 60) % 60
-    seconds = (minutes * 60) % 60
+    minutes = (hours * 60)
+    seconds = (minutes * 60)
     print(
         f"Sessions: {analytics[0]}.\n" \
-        f"Time spent: {math.floor(analytics[1])} days, {math.floor(hours)}:{math.floor(minutes)}:{math.floor(seconds)}."
+        f"Time spent: {math.floor(analytics[1])} days, {math.floor(hours) % 24}:{math.floor(minutes) % 60}:{math.floor(seconds) % 60}."
     )
 
 
